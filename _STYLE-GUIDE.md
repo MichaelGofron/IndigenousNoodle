@@ -378,3 +378,9 @@ When writing any block of code that is logically subordinate to the line immedia
     <!-- bad -->
     <script src="a.js" type="text/javascript"></script>
     ```
+
+
+### Angular
+
+* We are following John Papa's style guide: 
+https://github.com/johnpapa/angular-styleguide
