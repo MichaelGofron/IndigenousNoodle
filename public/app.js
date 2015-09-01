@@ -3,14 +3,15 @@
     'app.navbar',
     'app.createEvent',
     'app.signupLogin',
-    'app.factories',
     'ui.router',
     'ui.bootstrap',
     'eventList',
     'homepage',
     'app.eventManager',
     'app.userProfile',
-    'app.dataservice'
+    'app.dataservice',
+    'app.factories',
+    'app.sendEvent'
     ])
 
   .config(router)
@@ -72,6 +73,12 @@
         resolve: {
           getProfilePrep: getProfileService
         }
+      })
+      .state('eventDetail', {
+        url: '/eventDetail',
+        templateUrl: './eventDetailPage/eventDetailTemplate.html',
+        controller: 'eventDetailController',
+        controllerAs: 'event'
       })
       function getEventList($http, $stateParams, dataservice) {
         return dataservice.getEventList($stateParams.city);
