@@ -14,10 +14,14 @@
   ],
   "dependencies": {
     "angular": "~1.4.4",
+    "angular-animate": "~1.4.5",
+    "angular-bootstrap": "~0.13.3",
+    "angular-google-maps": "~2.2.0",
+    "angular-mocks": "~1.4.5",
+    "angular-payments": "2472bc9befa25678",
+    "angular-simple-logger": "~0.0.1",
     "angular-ui-router": "~0.2.15",
     "bootstrap": "~3.3.5",
-    "angular-bootstrap": "~0.13.3",
-    "polymer": "Polymer/polymer#^1.0.0",
     "paper-button": "PolymerElements/paper-button#^1.0.0",
     "paper-card": "PolymerElements/paper-card#^1.0.0",
     "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#^1.0.0",
@@ -30,10 +34,7 @@
     "paper-toast": "PolymerElements/paper-toast#^1.0.0",
     "paper-toggle-button": "PolymerElements/paper-toggle-button#^1.0.0",
     "paper-tooltip": "PolymerElements/paper-tooltip#^1.0.0",
-    "angular-animate": "~1.4.5",
-    "angular-mocks": "~1.4.5",
-    "angular-google-maps": "~2.2.0",
-    "angular-simple-logger": "~0.0.1"
+    "polymer": "Polymer/polymer#^1.0.0"
   },
   "directory": "public/lib"
 }

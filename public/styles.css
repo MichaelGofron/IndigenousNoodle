@@ -74,6 +74,9 @@ paper-input-container {
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   padding: 20px;
 }
+.ng-invalid {
+    color: red;
+}
 /*
 .angular-google-map-container { height: 400px; }
 .mapMain{

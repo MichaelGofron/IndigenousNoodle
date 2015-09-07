@@ -11,6 +11,8 @@
 
     vm.details = getEvent.data;
 
+    console.log("event data === ", vm.details);
+
     /////////////////////////
 
     function join(){

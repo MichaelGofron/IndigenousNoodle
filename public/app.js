@@ -13,18 +13,20 @@
     'app.eventDetail',
     'app.dataservice',
     'app.profilePage',
+    'app.stripeForm',
     'uiGmapgoogle-maps',
     'app.maps',
+    'angularPayments',
     'ngAnimate'
     ])
   .config(router)
   .run(requireUserSignin)
 
-  router.$inject = ['$urlRouterProvider', '$stateProvider', '$httpProvider'];
+  router.$inject = ['$urlRouterProvider', '$stateProvider', '$httpProvider', '$windowProvider'];
 
   requireUserSignin.$inject = ['$rootScope','$state', 'Auth'];
 
-  function router($urlRouterProvider, $stateProvider, $httpProvider) {
+  function router($urlRouterProvider, $stateProvider, $httpProvider, $windowProvider) {
     $urlRouterProvider.otherwise("/");
 
     // paths
@@ -134,6 +136,11 @@
           getUserProfilePrep: getUserProfileService
         }
       })
+      .state('paymentForm', {
+        url: '/paymentForm',
+        templateUrl: './components/stripeForm/stripeFormTemplate.html',
+        controller: 'stripeController'
+      })
 
     // resolve functions
     function getEventList($http, $stateParams, eventsService) {
@@ -163,6 +170,10 @@
     function getCity($stateParams){
       return $stateParams.city;
     }
+
+    // stripe key config
+    var $window = $windowProvider.$get();
+    $window.Stripe.setPublishableKey('pk_test_5YUv9kMpgpOkFzEsvbDb7kf0');
 
     // token authentication
     $httpProvider.interceptors.push('AttachTokens');

@@ -30,3 +30,4 @@ public/lib/
 
 *.DS_Store
 aws.config.js
+stripe.config.js

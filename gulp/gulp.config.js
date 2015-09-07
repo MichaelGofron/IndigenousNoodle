@@ -1,6 +1,7 @@
 module.exports = {
   build_dir: 'build',
 
+
   app_files: {
     js: ['public/**/*.js', 'server/**/*.js', '!public/lib/**/*'],
     tpl_src: ['./build/public/lib/angular/angular.min.js',
@@ -12,8 +13,8 @@ module.exports = {
       './build/public/lib/angular-ui-router/release/angular-ui-router.min.js',
       './build/public/lib/lodash/lodash.min.js',
       './build/public/lib/angular-google-maps/dist/angular-google-maps.min.js',
+      './build/public/lib/angular-payments/lib/angular-payments.min.js',
       './build/public/signupLogin/signupLoginController.js',
-      './build/public/factories/factories.js',
       './build/public/app.js',
       './build/public/services/data.service.js',
       './build/public/services/attachTokenService.js',
@@ -22,8 +23,10 @@ module.exports = {
       './build/public/services/usersAndEventsService.js',
       './build/public/services/usersService.js',
       './build/public/services/reviewService.js',
-      './build/public/services/googleMapService.js',
+      './build/public/services/APIServices/googleMapService.js',
+      './build/public/services/APIServices/stripeService.js',
       './build/public/components/navBar/navBarDirective.js',
+      './build/public/components/stripeForm/stripeFormController.js',
       './build/public/homepage/homepageController.js',
       './build/public/eventDetailPage/eventDetailController.js',
       './build/public/eventsDisplayPage/eventsDisplayController.js',
